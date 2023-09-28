@@ -105,3 +105,8 @@ export default function Cart() {
     </div>
   );
 }
+export default function Cart() {
+  const [totalCost, setTotalCost] = useState(0);
+  const { cartItems } = useCart();
+  const { removeItem } = useRemoveItem();
+  const { addItem } = useAddItem();
